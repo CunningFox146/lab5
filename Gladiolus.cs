@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
-    class Program
+    class Gladiolus
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }

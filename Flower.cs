@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
-    class Program
+    class Flower
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }
