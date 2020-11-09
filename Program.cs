@@ -10,6 +10,10 @@ namespace lab5
     {
         static void Main(string[] args)
         {
+            var bush = new Bush("bush", true);
+            bush.ConsumeLight();
+            var testBush = (ITest)bush;
+            testBush.ConsumeLight();
 
         }
     }

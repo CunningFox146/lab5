@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
-    class Bush: Plant
+    class Bush: Plant, ITest
     {
         private bool edible;
         public bool Edible { get; set; }
@@ -20,6 +20,16 @@ namespace lab5
         public void EatBerries()
         {
             Console.WriteLine(edible ? "Yummy!" : "Oh no, I'm dead");
+        }
+
+        public override void ConsumeLight()
+        {
+            Console.WriteLine("Consumed");
+        }
+
+        void ITest.ConsumeLight()
+        {
+            Console.WriteLine("Consumed from interface");
         }
     }
 }

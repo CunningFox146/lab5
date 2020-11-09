@@ -10,6 +10,7 @@ namespace lab5
     {
         protected string type;
         public string Type { get; set; }
+        public abstract void ConsumeLight();
 
         public virtual void ConsumeO2()
         {

@@ -12,4 +12,9 @@ namespace lab5
         public bool BecomeDeceased();
         public void CheckDeceased();
     }
+
+    interface ITest
+    {
+        public void ConsumeLight();
+    }
 }
