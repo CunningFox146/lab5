@@ -6,11 +6,37 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
-    class Rose : Flower
+    class Rose : Flower, IDiseaseable
     {
-        public Rose(string type, string color) : base(type, color)
-        {
+        private bool pointy;
+        public bool Pointy;
+        private Random rnd = new Random();
 
+        public Rose(string type, string color, bool pointy) : base(type, color)
+        {
+            Pointy = this.pointy;
+            this.pointy = pointy;
+        }
+
+        public void Touch()
+        {
+            Console.WriteLine(pointy ? "mmm soft to my teeth" : "pointy to my tongue and gums");
+        }
+
+        public bool CanBeDeceased()
+        {
+            return rnd.Next() <= 0.1;
+        }
+
+        public bool BecomeDeceased()
+        {
+            Console.WriteLine($"{type} became deceased!");
+            return true;
+        }
+
+        public void CheckDeceased()
+        {
+            Console.WriteLine(CanBeDeceased() ? "It's sick and dead!" : "It's alive and happy!");
         }
     }
 }

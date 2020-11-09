@@ -8,9 +8,18 @@ namespace lab5
 {
     class Bush: Plant
     {
+        private bool edible;
+        public bool Edible;
+
         public Bush(string type, bool edible) : base(type)
         {
+            Edible = this.edible;
+            this.edible = edible;
+        }
 
+        public void EatBerries()
+        {
+            Console.WriteLine(edible ? "Yummy!" : "Oh no, I'm dead");
         }
     }
 }
