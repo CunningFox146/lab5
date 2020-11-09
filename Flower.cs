@@ -9,7 +9,7 @@ namespace lab5
     class Flower : Plant
     {
         private string color;
-        public string Color;
+        public string Color { get; set; }
 
         public Flower(string type, string color) : base(type)
         {

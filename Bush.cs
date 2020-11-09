@@ -9,7 +9,7 @@ namespace lab5
     class Bush: Plant
     {
         private bool edible;
-        public bool Edible;
+        public bool Edible { get; set; }
 
         public Bush(string type, bool edible) : base(type)
         {

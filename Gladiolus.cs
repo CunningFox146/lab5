@@ -9,7 +9,7 @@ namespace lab5
     class Gladiolus : Flower, IDiseaseable
     {
         private bool isWatered;
-        public bool IsWatered;
+        public bool IsWatered { get; set; }
         private Random rnd = new Random();
 
         public Gladiolus(string type, string color, bool watered) : base(type, color)

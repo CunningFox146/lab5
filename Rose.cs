@@ -9,7 +9,7 @@ namespace lab5
     class Rose : Flower, IDiseaseable
     {
         private bool pointy;
-        public bool Pointy;
+        public bool Pointy { get; set; }
         private Random rnd = new Random();
 
         public Rose(string type, string color, bool pointy) : base(type, color)
