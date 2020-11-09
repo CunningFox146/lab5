@@ -50,6 +50,15 @@ namespace lab5
             var gladiolusPlant = (Plant)gladiolus;
             gladiolusPlant.ConsumeO2();
 
+            var toPrint = new List<Plant>();
+            toPrint.Add(flower);
+            toPrint.Add(rose);
+            toPrint.Add(gladiolus);
+            toPrint.Add(cactus);
+            foreach (Plant item in toPrint)
+            {
+                Printer.IAmPrinting(item);
+            }
 
             Console.ReadKey();
         }
