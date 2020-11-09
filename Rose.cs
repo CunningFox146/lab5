@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
-    class Rose
+    class Rose : Flower
     {
+        public Rose() : base()
+        {
+
+        }
     }
 }

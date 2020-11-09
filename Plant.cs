@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
-    class Plant
+    abstract class Plant
     {
+        protected string type;
+        public string Type { get; set; }
+
+        public void ConsumeO2()
+        {
+            Console.WriteLine("consumed o2!");
+        }
+
+        public Plant()
+        {
+            Type = type;
+        }
     }
 }
