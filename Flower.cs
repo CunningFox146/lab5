@@ -21,5 +21,12 @@ namespace lab5
         {
             Console.WriteLine($"Mmm, tastes like {color}");
         }
+
+        public override void ConsumeLight()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string ToString() => $"Flower: Color {color}";
     }
 }

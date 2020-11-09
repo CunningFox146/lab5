@@ -31,5 +31,10 @@ namespace lab5
             }
             base.ConsumeO2();
         }
+
+        public override void ConsumeLight()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

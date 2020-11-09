@@ -44,5 +44,7 @@ namespace lab5
         {
             Console.WriteLine(CanBeDeceased() ? "It's sick and dead!" : "It's alive and happy!");
         }
+
+        public override string ToString() => $"Gladiolus: isWatered {isWatered}";
     }
 }

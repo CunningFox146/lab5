@@ -22,5 +22,7 @@ namespace lab5
             Type = this.type;
             this.type = type;
         }
+
+        public override string ToString() => $"Plant: type {type}";
     }
 }

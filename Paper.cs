@@ -21,5 +21,7 @@ namespace lab5
         {
             Console.WriteLine(text);
         }
+
+        public override string ToString() => $"Paper: text {text}";
     }
 }

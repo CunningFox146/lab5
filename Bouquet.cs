@@ -43,5 +43,6 @@ namespace lab5
         {
             return (Bouquet)this.MemberwiseClone();
         }
+
     }
 }

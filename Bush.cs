@@ -31,5 +31,7 @@ namespace lab5
         {
             Console.WriteLine("Consumed from interface");
         }
+
+        public override string ToString() => $"Bush: edible {edible}";
     }
 }
