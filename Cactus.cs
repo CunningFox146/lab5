@@ -21,5 +21,15 @@ namespace lab5
         {
             Console.WriteLine(isBlooming ? "Pretty flowers for pretty me" : "There's nothing to take lol");
         }
+
+        public override void ConsumeO2()
+        {
+            if (!isBlooming)
+            {
+                Console.WriteLine("Consumed a little bit of o2.");
+                return;
+            }
+            base.ConsumeO2();
+        }
     }
 }

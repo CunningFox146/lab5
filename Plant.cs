@@ -11,7 +11,7 @@ namespace lab5
         protected string type;
         public string Type { get; set; }
 
-        public void ConsumeO2()
+        public virtual void ConsumeO2()
         {
             Console.WriteLine("consumed o2!");
         }
