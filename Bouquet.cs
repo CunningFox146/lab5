@@ -14,7 +14,7 @@ namespace lab5
         public Bouquet(string name)
         {
             Name = name;
-            this.name = name
+            this.name = name;
         }
 
         public override bool Equals(object obj)

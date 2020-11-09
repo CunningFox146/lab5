@@ -8,7 +8,7 @@ namespace lab5
 {
     class Gladiolus : Flower
     {
-        public Gladiolus() : base()
+        public Gladiolus(string type, string color) : base(type, color)
         {
 
         }

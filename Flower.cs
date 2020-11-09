@@ -8,7 +8,7 @@ namespace lab5
 {
     class Flower : Plant
     {
-        public Flower() : base()
+        public Flower(string type, string color) : base(type)
         {
 
         }

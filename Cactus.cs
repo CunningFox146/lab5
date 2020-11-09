@@ -8,7 +8,7 @@ namespace lab5
 {
     sealed class Cactus : Plant
     {
-        public Cactus() : base()
+        public Cactus(string type) : base(type)
         {
 
         }

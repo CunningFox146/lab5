@@ -16,9 +16,10 @@ namespace lab5
             Console.WriteLine("consumed o2!");
         }
 
-        public Plant()
+        public Plant(string type)
         {
-            Type = type;
+            Type = this.type;
+            this.type = type;
         }
     }
 }
