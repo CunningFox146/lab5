@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
-    class Bush: Plant, ITest
+    class Bush : Plant, ITest
     {
         private bool edible;
         public bool Edible { get; set; }

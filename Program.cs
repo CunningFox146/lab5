@@ -45,6 +45,14 @@ namespace lab5
                 Console.WriteLine();
                 bouquetFromFile.Display();
             }
+
+            BouquetController.ToJson(bouquet, "flower.json");
+            Bouquet bouquetFromJson = BouquetController.FromJson(@"C:\Users\Professional\Desktop\Универ\ООП\lab5\bin\Debug\flower.json");
+            if (bouquetFromJson != null)
+            {
+                Console.WriteLine();
+                bouquetFromJson.Display();
+            }
         }
     }
 }

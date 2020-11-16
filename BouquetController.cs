@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Text.Json;
 
 namespace lab5
 {
@@ -76,5 +76,46 @@ namespace lab5
 
             return newBouquet;
         }
+
+        public static void ToJson(Bouquet boquet, string path)
+        {
+            string json = JsonSerializer.Serialize<Bouquet>(boquet);
+            if (!File.Exists(path))
+            {
+                File.Create(path);
+            }
+            File.WriteAllText(path, json);
+            Console.WriteLine("Serialized and saved!");
+        }
+
+        public static Bouquet FromJson(string path)
+        {
+            string json = File.ReadAllText(path);
+            if (json != null)
+            {
+                return JsonSerializer.Deserialize<Bouquet>(json);
+            }
+            return null;
+        }
+
+        /*
+        public static void ToJson(Bouquet bouquet, string path)
+        {
+            string json = JsonConvert.SerializeObject(bouquet, Formatting.Indented);
+            File.WriteAllText(path, json);
+            Console.WriteLine("Serialized successfully!");
+        }
+
+        public static Bouquet FromJson(string path)
+        {
+            IList<Bouquet> dat = JsonConvert.DeserializeObject<IList<Bouquet>>(File.ReadAllText(path));
+            foreach (var transformerTemplate in dat)
+            {
+                Console.WriteLine(transformerTemplate);
+                //ControlMember.Add(TemplatesConverter.TemplateToTransformer(transformerTemplate));
+            }
+
+            return new Bouquet();//JsonConvert.DeserializeObject<Bouquet>(File.ReadAllText(path), new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto });
+        }*/
     }
 }
