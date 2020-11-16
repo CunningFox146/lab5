@@ -3,46 +3,57 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace lab5
 {
-    class Bouquet
+    class Bouquet: IEnumerable
     {
-        private string name;
-        public string Name;
+        private List<Flower> flowers;
+        public List<Flower> Flowers { get; set; }
 
-        public Bouquet(string name)
+        public Flower this[int i]
         {
-            Name = name;
-            this.name = name;
-        }
-
-        public override bool Equals(object obj)
-        {
-            var other = obj as Bouquet;
-            if (other == null)
+            get
             {
-                return false;
+                return flowers[i];
             }
-            return this.name == other.name;
+            set
+            {
+                if (value is Flower)
+                {
+                    flowers[i] = value;
+                }
+            }
         }
 
-        public override int GetHashCode()
+        public IEnumerator GetEnumerator()
         {
-            return name.GetHashCode();
+            return flowers.GetEnumerator();
         }
 
-        // Return the point's value as a string.
-        public override string ToString()
+        public Bouquet()
         {
-            return $"(Bouquet: {name})";
+            flowers = new List<Flower>();
+            Flowers = flowers;
         }
 
-        // Return a copy of this point object by making a simple field copy.
-        public Bouquet Copy()
+        public void Add(Flower flower)
         {
-            return (Bouquet)this.MemberwiseClone();
+            flowers.Add(flower);
         }
 
+        public void Remove(Flower flower)
+        {
+            flowers.Remove(flower);
+        }
+
+        public void Display()
+        {
+            for (byte i = 0; i < flowers.Count; i++)
+            {
+                Console.WriteLine($"Flower #{i}: {flowers[i]}");
+            }
+        }
     }
 }

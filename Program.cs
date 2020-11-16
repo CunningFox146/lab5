@@ -10,6 +10,17 @@ namespace lab5
     {
         static void Main(string[] args)
         {
+            //Lab5();
+            Lab6();
+        }
+
+        static void Lab6()
+        {
+
+        }
+
+        static void Lab5()
+        {
             var bush = new Bush("bush", true);
             bush.ConsumeLight();
             ((ITest)bush).ConsumeLight();
@@ -31,7 +42,7 @@ namespace lab5
             {
                 Console.WriteLine(rosePlant);
             }
-            
+
             var roseDisieaseable = rose as IDiseaseable;
             if (roseDisieaseable != null)
             {
