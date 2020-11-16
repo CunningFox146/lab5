@@ -32,6 +32,10 @@ namespace lab5
 
             Console.WriteLine($"\nPrice: {BouquetController.GetPrice(bouquet)}");
             Console.WriteLine($"Red flower: {BouquetController.GetFlowerByColor(bouquet, "red")}");
+            BouquetController.Sort(bouquet);
+
+            Console.WriteLine();
+            bouquet.Display();
         }
     }
 }

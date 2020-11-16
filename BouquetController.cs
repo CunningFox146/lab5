@@ -45,5 +45,10 @@ namespace lab5
             }
             return null;
         }
+
+        static public void Sort(Bouquet bouquet)
+        {
+            bouquet.Flowers.Sort();
+        }
     }
 }
