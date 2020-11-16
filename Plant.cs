@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
+    [Serializable]
     abstract class Plant
     {
         protected string type;

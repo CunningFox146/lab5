@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
+    [Serializable]
     class Flower : Plant, IComparable
     {
         private string color;

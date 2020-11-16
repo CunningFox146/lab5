@@ -7,6 +7,7 @@ using System.Collections;
 
 namespace lab5
 {
+    [Serializable]
     class Bouquet: IEnumerable
     {
         private List<Flower> flowers;

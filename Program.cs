@@ -36,6 +36,15 @@ namespace lab5
 
             Console.WriteLine();
             bouquet.Display();
+
+            BouquetController.ToFile(bouquet, "flower.dat");
+
+            Bouquet bouquetFromFile = BouquetController.FromFile("flower.dat");
+            if (bouquetFromFile != null)
+            {
+                Console.WriteLine();
+                bouquetFromFile.Display();
+            }
         }
     }
 }

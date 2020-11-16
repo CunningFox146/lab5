@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
+    [Serializable]
     class Gladiolus : Flower, IDiseaseable
     {
         private bool isWatered;

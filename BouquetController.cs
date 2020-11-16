@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace lab5
 {
@@ -49,6 +51,30 @@ namespace lab5
         static public void Sort(Bouquet bouquet)
         {
             bouquet.Flowers.Sort();
+        }
+
+        public static void ToFile(Bouquet bouquet, string path)
+        {
+            // создаем объект BinaryFormatter
+            BinaryFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
+            formatter.Serialize(stream, bouquet);
+            stream.Close();
+            Console.WriteLine("Serialized successfully!");
+        }
+
+        public static Bouquet FromFile(string path)
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read);
+
+            Bouquet newBouquet = (Bouquet)formatter.Deserialize(stream);
+
+            stream.Close();
+
+            Console.WriteLine("Deserialized successfully!");
+
+            return newBouquet;
         }
     }
 }
