@@ -35,7 +35,7 @@ namespace lab5
         public Bouquet()
         {
             flowers = new List<Flower>();
-            Flowers = flowers;
+            Flowers = this.flowers;
         }
 
         public void Add(Flower flower)
@@ -52,7 +52,7 @@ namespace lab5
         {
             for (byte i = 0; i < flowers.Count; i++)
             {
-                Console.WriteLine($"Flower #{i}: {flowers[i]}");
+                Console.WriteLine($"Flower #{i + 1}: {flowers[i]}");
             }
         }
     }

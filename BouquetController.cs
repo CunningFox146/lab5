@@ -15,7 +15,7 @@ namespace lab5
             {"blue", 3.1f},
         };
 
-        static float GetPrice(Bouquet bouquet)
+        static public float GetPrice(Bouquet bouquet)
         {
             float result = 0f;
             foreach (Flower flower in bouquet)
@@ -33,7 +33,7 @@ namespace lab5
             return result;
         }
 
-        static Flower GetFlowerByColor(Bouquet bouquet)
+        static public Flower GetFlowerByColor(Bouquet bouquet)
         {
 
             return null;

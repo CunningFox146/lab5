@@ -6,15 +6,25 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
-    class Flower : Plant
+    class Flower : Plant, IComparable
     {
         private string color;
         public string Color { get; set; }
 
+        public int CompareTo(object obj)
+        {
+            Flower flower = obj as Flower;
+            if (flower != null)
+            {
+                return this.color.CompareTo(flower.Color);
+            }
+            throw new Exception("Невозможно сравнить два объекта");
+        }
+
         public Flower(string type, string color) : base(type)
         {
-            Color = this.color;
             this.color = color;
+            Color = this.color;
         }
 
         public void Smell()
@@ -27,6 +37,6 @@ namespace lab5
             throw new NotImplementedException();
         }
 
-        public override string ToString() => $"Flower: Color {color}";
+        public override string ToString() => $"Flower: Type {type} Color {color}";
     }
 }

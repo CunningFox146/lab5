@@ -12,7 +12,7 @@ namespace lab5
         public bool IsWatered { get; set; }
         private Random rnd = new Random();
 
-        public Gladiolus(string type, string color, bool watered) : base(type, color)
+        public Gladiolus(string color, bool watered) : base("gladiolus", color)
         {
             IsWatered = isWatered;
             isWatered = watered;

@@ -48,6 +48,7 @@
     <Compile Include="Bouquet.cs" />
     <Compile Include="Bush.cs" />
     <Compile Include="Cactus.cs" />
+    <Compile Include="BouquetController.cs" />
     <Compile Include="Diseaseable.cs" />
     <Compile Include="Flower.cs" />
     <Compile Include="Gladiolus.cs" />

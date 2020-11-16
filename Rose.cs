@@ -12,7 +12,7 @@ namespace lab5
         public bool Pointy { get; set; }
         private Random rnd = new Random();
 
-        public Rose(string type, string color, bool pointy) : base(type, color)
+        public Rose(string color, bool pointy) : base("rose", color)
         {
             Pointy = this.pointy;
             this.pointy = pointy;
@@ -39,6 +39,6 @@ namespace lab5
             Console.WriteLine(CanBeDeceased() ? "It's sick and dead!" : "It's alive and happy!");
         }
 
-        public override string ToString() => $"Flower: pointy {pointy}";
+        public override string ToString() => $"Rose: pointy {pointy}";
     }
 }
