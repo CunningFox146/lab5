@@ -33,9 +33,16 @@ namespace lab5
             return result;
         }
 
-        static public Flower GetFlowerByColor(Bouquet bouquet)
+        // Returns only FIRST matching flower
+        static public Flower GetFlowerByColor(Bouquet bouquet, string color)
         {
-
+            foreach (Flower flower in bouquet)
+            {
+                if (flower.Color == color)
+                {
+                    return flower;
+                }
+            }
             return null;
         }
     }
