@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace NetCoreLab5
+namespace lab5
 {
     internal class BoquetException : Exception
     {
@@ -19,6 +19,7 @@ namespace NetCoreLab5
         {
         }
     }
+
     internal class NegativeFlowersException : BoquetException
     {
         public NegativeFlowersException()
@@ -34,7 +35,7 @@ namespace NetCoreLab5
         }
     }
 
-    internal class EmptyBouquet : Exception
+    internal class EmptyBouquet : BoquetException
     {
         public EmptyBouquet()
         {

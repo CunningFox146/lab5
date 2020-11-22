@@ -51,6 +51,11 @@ namespace lab5
 
         public void Display()
         {
+            if (flowers.Count == 0)
+            {
+                throw new EmptyBouquet();
+            }
+
             for (byte i = 0; i < flowers.Count; i++)
             {
                 Console.WriteLine($"Flower #{i + 1}: {flowers[i]}");

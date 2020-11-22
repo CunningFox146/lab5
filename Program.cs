@@ -11,6 +11,24 @@ namespace lab5
         static void Main(string[] args)
         {
             //Lab6();
+            Lab7();
+        }
+
+        static void Lab7()
+        {
+            Bouquet bouquet = new Bouquet();
+            try
+            {
+                bouquet.Display();
+            }
+            catch(EmptyBouquet e)
+            {
+                Console.WriteLine($"{e.Message} {e.StackTrace}");
+            }
+            finally
+            {
+                Console.WriteLine("Display: finalize");
+            }
         }
 
         static void Lab6()
