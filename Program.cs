@@ -10,7 +10,7 @@ namespace lab5
     {
         static void Main(string[] args)
         {
-            Lab6();
+            //Lab6();
         }
 
         static void Lab6()
@@ -47,7 +47,7 @@ namespace lab5
             }
 
             BouquetController.ToJson(bouquet, "flower.json");
-            Bouquet bouquetFromJson = BouquetController.FromJson(@"C:\Users\Professional\Desktop\Универ\ООП\lab5\bin\Debug\flower.json");
+            Bouquet bouquetFromJson = BouquetController.FromJson("flower.json");
             if (bouquetFromJson != null)
             {
                 Console.WriteLine();

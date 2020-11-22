@@ -11,7 +11,6 @@ namespace lab5
     {
         private bool isWatered;
         public bool IsWatered { get; set; }
-        private Random rnd = new Random();
 
         public Gladiolus(string color, bool watered) : base("gladiolus", color)
         {
@@ -32,7 +31,7 @@ namespace lab5
 
         public bool CanBeDeceased()
         {
-            return rnd.Next() <= 0.5;
+            return !isWatered;
         }
 
         public bool BecomeDeceased()

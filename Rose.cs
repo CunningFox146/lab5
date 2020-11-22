@@ -11,7 +11,6 @@ namespace lab5
     {
         private bool pointy;
         public bool Pointy { get; set; }
-        private Random rnd = new Random();
 
         public Rose(string color, bool pointy) : base("rose", color)
         {
@@ -26,7 +25,7 @@ namespace lab5
 
         public bool CanBeDeceased()
         {
-            return rnd.Next() <= 0.1;
+            return !pointy;
         }
 
         public bool BecomeDeceased()
