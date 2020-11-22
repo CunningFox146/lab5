@@ -30,6 +30,10 @@ namespace lab5
 
         public void Smell()
         {
+            if (color == null)
+            {
+                throw new FlowersException();
+            }
             Console.WriteLine($"Mmm, tastes like {color}");
         }
 

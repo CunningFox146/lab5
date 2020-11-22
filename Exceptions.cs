@@ -50,4 +50,33 @@ namespace lab5
         }
     }
 
+    internal class FlowersException : Exception
+    {
+        public FlowersException()
+        {
+        }
+
+        public FlowersException(string message) : base(message)
+        {
+        }
+
+        public FlowersException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+    }
+
+    internal class PaperTextException : Exception
+    {
+        public PaperTextException()
+        {
+        }
+
+        public PaperTextException(string message) : base(message)
+        {
+        }
+
+        public PaperTextException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+    }
 }

@@ -19,6 +19,10 @@ namespace lab5
 
         public void PrintText()
         {
+            if (text == null)
+            {
+                throw new PaperTextException();
+            }
             Console.WriteLine(text);
         }
 

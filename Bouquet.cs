@@ -49,6 +49,15 @@ namespace lab5
             flowers.Remove(flower);
         }
 
+        public void Remove()
+        {
+            if (flowers.Count == 0)
+            {
+                throw new NegativeFlowersException();
+            }
+            // Тут что-то должно быть?
+        }
+
         public void Display()
         {
             if (flowers.Count == 0)

@@ -29,6 +29,70 @@ namespace lab5
             {
                 Console.WriteLine("Display: finalize");
             }
+
+            Console.WriteLine();
+
+            try
+            {
+                bouquet.Remove();
+            }
+            catch(NegativeFlowersException e)
+            {
+                Console.WriteLine($"{e.Message} {e.StackTrace}");
+            }
+            finally
+            {
+                Console.WriteLine("Remove: finalize");
+            }
+
+            Console.WriteLine();
+
+            try
+            {
+                Console.WriteLine(bouquet[1]);
+            }
+            catch(ArgumentOutOfRangeException e)
+            {
+                Console.WriteLine($"{e.Message} {e.StackTrace}");
+            }
+            finally
+            {
+                Console.WriteLine("ArgumentOutOfRangeException: finalize");
+            }
+
+            Console.WriteLine();
+
+            try
+            {
+                var flower = new Flower("rose", "red");
+                flower.Color = null;
+                flower.Smell();
+            }
+            catch(FlowersException e)
+            {
+                Console.WriteLine($"{e.Message} {e.StackTrace}");
+            }
+            finally
+            {
+                Console.WriteLine("FlowersException: finalize");
+            }
+
+            Console.WriteLine();
+
+            try
+            {
+                var paper = new Paper("test");
+                paper.Text = null;
+                paper.PrintText();
+            }
+            catch(PaperTextException e)
+            {
+                Console.WriteLine($"{e.Message} {e.StackTrace}");
+            }
+            finally
+            {
+                Console.WriteLine("PaperTextException: finalize");
+            }
         }
 
         static void Lab6()
