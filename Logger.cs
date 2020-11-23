@@ -8,7 +8,14 @@ namespace lab5
     {
         public static void Log(string type, string msg)
         {
-            Console.WriteLine($"[{DateTime.Now.ToString()}] ({type}): {msg}");
+            if (FileLogger.instance != null)
+            {
+                FileLogger.instance.Log(type, msg);
+            }
+            else
+            {
+                Console.WriteLine($"[{DateTime.Now.ToString()}] ({type}): {msg}");
+            }
         }
 
         public static void LogWarning(string msg)

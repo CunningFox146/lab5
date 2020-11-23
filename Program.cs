@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Threading;
 
 namespace lab5
 {
@@ -17,6 +18,8 @@ namespace lab5
 
         static void Lab7()
         {
+            FileLogger fileLogger = new FileLogger(@"C:\Users\Professional\Desktop\Универ\ООП\Lab5Core\log.txt");
+
             Bouquet bouquet = new Bouquet();
             try
             {
@@ -94,6 +97,10 @@ namespace lab5
             {
                 Console.WriteLine("PaperTextException: finalize");
             }
+
+            new Flower("invalid", "black");
+
+            Thread.Sleep(10);
 
             Debug.Assert(false, "Test");
         }

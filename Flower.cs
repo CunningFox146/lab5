@@ -26,6 +26,11 @@ namespace lab5
         {
             this.color = color;
             Color = this.color;
+
+            if (color == "black")
+            {
+                Logger.LogWarning("Таких цветов не бывает!");
+            }
         }
 
         public void Smell()
