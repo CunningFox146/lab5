@@ -6,9 +6,9 @@ namespace lab5
 {
     static class Logger
     {
-        public static void Log(string msg)
+        public static void Log(string type, string msg)
         {
-            Console.WriteLine($"LOGGER: {msg}");
+            Console.WriteLine($"[{DateTime.Now.ToString()}] ({type}): {msg}");
         }
 
         public static void LogWarning(string msg)
@@ -18,7 +18,7 @@ namespace lab5
 
             Console.ForegroundColor = ConsoleColor.Black;
             Console.BackgroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"LOGGER WARNING: {msg}");
+            Log("WARNING", msg);
             Console.ForegroundColor = consoleColor;
             Console.BackgroundColor = consoleColorBG;
         }
@@ -30,7 +30,7 @@ namespace lab5
 
             Console.ForegroundColor = ConsoleColor.Red;
             Console.BackgroundColor = ConsoleColor.Black;
-            Console.WriteLine($"LOGGER ERROR: {msg}");
+            Log("ERROR", msg);
             Console.ForegroundColor = consoleColor;
             Console.BackgroundColor = consoleColorBG;
         }
