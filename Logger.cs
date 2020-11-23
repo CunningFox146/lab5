@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetCoreLab5
+namespace lab5
 {
     static class Logger
     {

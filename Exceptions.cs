@@ -5,18 +5,27 @@ using System.Text;
 
 namespace lab5
 {
+
     internal class BoquetException : Exception
     {
+        private void Log()
+        {
+            Logger.LogError($"BoquetException! {this.Message}");
+        }
+
         public BoquetException()
         {
+            Log();
         }
 
         public BoquetException(string message) : base(message)
         {
+            Log();
         }
 
         public BoquetException(string message, Exception innerException) : base(message, innerException)
         {
+            Log();
         }
     }
 
@@ -50,7 +59,7 @@ namespace lab5
         }
     }
 
-    internal class FlowersException : Exception
+    internal class FlowersException : BoquetException
     {
         public FlowersException()
         {
@@ -65,7 +74,7 @@ namespace lab5
         }
     }
 
-    internal class PaperTextException : Exception
+    internal class PaperTextException : BoquetException
     {
         public PaperTextException()
         {
